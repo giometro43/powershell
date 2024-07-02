@@ -1,3 +1,19 @@
+<#
+.SYNOPSIS
+This script restores a terminated user's Azure AD account, converts their mailbox to a shared mailbox, grants access to another user,
+and schedules the mailbox to be disabled after 30 days.
+
+.DESCRIPTION
+The script performs the following steps:
+1. Installs and imports the required PowerShell modules (AzureAD, ExchangeOnlineManagement, MSOnline).
+2. Connects to Azure AD, Microsoft Online, and Exchange services.
+3. Prompts the administrator for the terminated user's UPN (User Principal Name) and the requesting user's UPN.
+4. Checks if the terminated user is in the deleted users list and restores them if necessary.
+5. Converts the terminated user's mailbox to a shared mailbox and grants full access permissions to the requesting user.
+6. Permanently deletes the terminated user's Azure AD account using the MSOnline module.
+7. Schedules a task to disable the shared mailbox after 30 days.
+#>
+
 # Install and Import required modules
 Install-Module -Name AzureAD -AllowClobber -Force
 Install-Module -Name ExchangeOnlineManagement -AllowClobber -Force
