@@ -1,3 +1,4 @@
+# Takes Organization CSV file and connects to exchange online and filters through site list for only ones containing CIT in their url
 $CSVFilePath = "C:\Users\giovannicastillo\OneDrive - City of Torrance\Desktop\CSV Files\DL-Members.csv"
 
 Try {
