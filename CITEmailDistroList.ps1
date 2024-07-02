@@ -1,4 +1,16 @@
-# Takes Organization CSV file and connects to exchange online and filters through site list for only ones containing CIT in their url
+<#
+.SYNOPSIS
+This script connects to Exchange Online, filters distribution groups to find those related to the CIT department, retrieves their members, and exports the information to a CSV file.
+
+.DESCRIPTION
+The script performs the following steps:
+1. Connects to Exchange Online.
+2. Filters distribution groups to get only those related to the CIT department by looking for groups with names containing "CIT -" or "CIT ".
+3. Iterates through each filtered distribution group to retrieve its members.
+4. Collects relevant information (Group Name, Group Email, Member Name, Member Email Address, and Recipient Type) about each member.
+5. Exports the collected information to a specified CSV file.
+#>
+
 $CSVFilePath = "C:\Users\giovannicastillo\OneDrive - City of Torrance\Desktop\CSV Files\DL-Members.csv"
 
 Try {
