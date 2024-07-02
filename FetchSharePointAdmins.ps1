@@ -1,13 +1,15 @@
 <# 
 .SYNOPSIS
-This PowerShell script connects to a SharePoint Online site and retrieves information about departmental sites and their owners, then updates a SharePoint list with this information.
+This PowerShell script connects to a SharePoint Online site and retrieves information about departmental sites and their owners, 
+then updates a SharePoint list with this information.
 
 .DESCRIPTION
 The script performs the following steps:
 1. Connects to the specified SharePoint Online site using certificate-based authentication.
 2. Checks if a specified SharePoint list ("DeptSitesList") exists; if not, it creates the list with appropriate fields.
 3. Connects to the SharePoint Online Admin Center and retrieves all departmental sites (those ending with "_DEPT").
-4. For each departmental site, it connects to the site, retrieves the owners group and its members, and stores the site URL and owner email addresses in a collection.
+4. For each departmental site, it connects to the site, retrieves the owners group and its members, and stores the site URL and
+owner email addresses in a collection.
 5. Updates the "DeptSitesList" in the specified SharePoint site with the collected site URL and owner email information.
 6. Outputs the collected data to the console for review.
 #>
