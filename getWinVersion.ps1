@@ -74,7 +74,7 @@ $ExportData += $Servers_EOS            | Select-Object Name, OperatingSystem, Op
 $ExportData += $Servers_Supported      | Select-Object Name, OperatingSystem, OperatingSystemVersion,@{Name="Category";Expression={"Server_Supported"}}
 $ExportData += $Unknown_OS             | Select-Object Name,@{Name="OperatingSystem";Expression={"N/A"}},@{Name="OperatingSystemVersion";Expression={"N/A"}},@{Name="Category";Expression={"Unknown_OS"}}
 
-$ExportData | Export-Csv "C:\Users\gcastillo\Desktop\ComputerOS_Report.csv" -NoTypeInformation -Encoding UTF8
+$ExportData | Export-Csv "C:\Users\YOURUSERNAME\Desktop\ComputerOS_Report.csv" -NoTypeInformation -Encoding UTF8
 
 Write-Host "`nResults exported to ComputerOS_Report.csv" -ForegroundColor Green
 
