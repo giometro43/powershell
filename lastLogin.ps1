@@ -1,7 +1,7 @@
 # ============================
 # Configuration
 # ============================
-$HostList = "C:\Users\gcastillo\Desktop\win10hostnames.txt"
+$HostList = "C:\Users\YOURUSERNAME\Desktop\win10hostnames.txt"
 
 $Days60   = 60
 $Days180  = 180
@@ -155,4 +155,5 @@ $FinalExport += [PSCustomObject]@{
 # ============================
 # Export CSV
 # ============================
-$FinalExport | Export-Csv "C:\Users\gcastillo\Desktop\LoginReportw10.csv" -NoTypeInformation
+$FinalExport | Export-Csv "C:\Users\YOURUSERNAME\Desktop\LoginReportw10.csv" -NoTypeInformation
+
